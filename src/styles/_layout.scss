@@ -1,0 +1,539 @@
+@import "./typography.css";
+
+@mixin pillColor($background_color) {
+  background: $background_color;
+  border: none;
+}
+
+.hero-caption {
+  background: #B88500;
+  color: #FFFFFF;
+  padding: 3%;
+  text-align: center;
+}
+
+.hero-image {
+  margin: 0 auto;
+  max-width: 360;
+}
+
+div.main {
+  min-height: 100vh;
+  padding-bottom: 60px;
+}
+
+div.full-height {
+  min-height: 100vh;
+}
+
+.footer-col {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+    box-shadow: $shadowCenter;
+    footer {
+      display: flex;
+      position: relative;
+      bottom: 0;
+      height: 30px;
+      clear: both;
+      background-color: gray;
+      color: white;
+      justify-content: center;
+      width: 100%;
+  
+      span {
+        align-self: center;
+        text-align: center;
+      }
+    }
+}
+
+.bottom-row {
+  bottom: 0;
+  position: "fixed"; 
+  width: 100%;
+}
+
+.shadow,
+.hover-shadow:hover {
+  box-shadow: $shadow;
+}
+
+.hover-shadow-card:hover {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.ext-web-link,
+.ext-web-link:visited,
+article a,
+article a:visited {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.ext-web-link:hover,
+article a:hover {
+  color: #fff;
+  text-decoration: none;
+  background: linear-gradient(to right bottom, rgba(255, 255, 255, 0.3), rgba(135, 135, 135, 0.3)), #A35BFF;
+  box-shadow: $shadow;
+  padding: 2px 10px;
+  border-radius: 10px;
+  font-weight: bold;
+}
+
+body {
+  font-family: "Futura", "Segoe UI", Arial, Helvetica, sans-serif;
+  color: #fff;
+  background-image: url("../images/WhitePaperBackground.png");
+  background-size: cover;
+}
+
+main, .modal {
+  text-align: center;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  text-align: center;
+}
+
+.underline-text {
+  text-decoration: underline;
+}
+
+.accordion-item {
+  border: none;
+}
+
+.accordion-button,
+.accordion-button:not(.collapsed) {
+  background: $primaryColor;
+  border: none;
+  color: #fff;
+  display: block;
+}
+
+.accordion-button::after {
+  display: none;
+}
+
+.flex-center {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.form-control {
+  border: none;
+}
+
+.btn,
+.btn:hover,
+.btn:focus {
+  @include pillColor($primaryColor);
+  color: white;
+  --bs-btn-active-color: white;
+}
+
+.btn:hover {
+  box-shadow: $shadow;
+  background: linear-gradient(to right bottom, rgba(255, 255, 255, 0.3), rgba(135, 135, 135, 0.3)), $primaryColor;
+}
+
+.btn:disabled {
+  @include pillColor((linear-gradient(to right bottom, rgba(255, 255, 255, 0.3), rgba(135, 135, 135, 0.3)), $secondaryColor));
+  color: white;
+}
+
+.btn.secondary-color,
+.btn.secondary-color:hover,
+.btn.secondary-color:focus {
+  @include pillColor($secondaryColor);
+  color: white;
+  --bs-btn-active-color: white;
+}
+
+.btn.secondary-color:hover {
+  @include pillColor((linear-gradient(to right bottom, rgba(255, 255, 255, 0.3), rgba(135, 135, 135, 0.3)), $secondaryColor));
+  box-shadow: $shadow;
+}
+
+.profile-button {
+  background: rgba(255, 255, 255, 0);
+  border-radius: 10px;
+  padding: 0;
+
+  .profile-caption {
+    color: $primaryColor;
+  }
+}
+
+.profile-button:hover,
+.profile-button:focus {
+  box-shadow: $shadowCenter;
+
+  .profile-caption {
+    color: white;
+  }
+}
+
+.category-button {
+  background: rgba(255, 255, 255, 0);
+  border-radius: 10px;
+  padding: 0;
+}
+
+.category-button:hover {
+  box-shadow: $shadowCenter;
+  .category-caption {
+    color: white;
+  }
+}
+
+.img-button {
+  background: rgba(255, 255, 255, 0);
+  border-radius: 0px;
+  padding: 0;
+}
+
+.img-button.media-preview .media-preview-title {
+  color: $primaryColor;
+
+  .media-preview-badge {
+    color: #FFFFFF;
+  }
+}
+
+.img-button:hover {
+  background: rgba(255, 255, 255, 0);
+  box-shadow: $shadowImg;
+}
+
+.img-button.media-preview:hover .media-preview-title {
+  color: $primaryColor;
+
+  .media-preview-badge {
+    color: #FFFFFF;
+  }
+}
+
+.media-preview-image {
+  border: 5px solid rgb(221, 221, 221);
+}
+
+.MuiGridList-root {
+  justify-content: center;
+  margin: 0px !important;
+}
+
+.MuiButtonBase-root.MuiIconButton-root {
+  background: $primaryColor;
+  color: #FFFFFF;
+}
+
+.MuiButtonBase-root.MuiIconButton-root:hover {
+  background: $buttonGradient, $primaryColor;
+  color: #FFFFFF;
+  box-shadow: $shadow;
+}
+
+.modal-content {
+  box-shadow: $shadowCenter;
+}
+
+ul, ol {
+  padding: 0px;
+}
+
+ol.instructions-list li {
+  display: list-item;
+  list-style-type: decimal;
+  list-style-position: inside;
+}
+
+ul.bullet-points li {
+  list-style-type: circle;
+  display: list-item;
+  list-style-position: inside;
+}
+
+.badge {
+  background-color: #A35BFF !important;
+}
+
+.view {
+  position: relative;
+  overflow: hidden;
+  cursor: default;
+}
+
+.view .mask {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background-attachment: fixed;
+}
+
+.caption-background {
+  background-color: $secondaryColorTransparent;
+  color: white;
+}
+
+.preview-section {
+  background-color: $primaryColor;
+  color: white; 
+  padding-top: 5%;
+  padding-bottom: 5%;
+  text-align: center; 
+  border-radius: 5px;
+}
+
+.preview-section-button, .preview-section-button:hover {
+  background-color: $secondaryColor;
+}
+
+.center-image {
+  text-align: center;
+  justify-content: center;
+}
+
+.flightlog-page {
+  border: 5px solid rgb(230, 230, 230);
+  box-shadow: $shadowImg;
+}
+
+.flightlog-main {
+  min-height: 8.26in;
+}
+
+.flightlog-main,
+.img-button.flightlog-page-thumbnail {
+  font-family: "Chalkduster", "Futura", "Segoe UI", Arial, Helvetica, sans-serif;
+  color: #00f;
+  border-left: 20px dotted gray;
+  background-color: rgb(255, 234, 183);
+  background-image: url("../images/Au-Some\ Blogs\ Background.png");
+  background-size: 90%;
+  background-position: center;
+}
+
+.flightlog-main,
+.img-button.flightlog-page-thumbnail:hover,
+.img-button.flightlog-page-thumbnail:focus {
+  box-shadow: $shadowCenter;
+}
+
+.img-button.flightlog-page-thumbnail,
+.img-button.flightlog-page-thumbnail:hover,
+.img-button.flightlog-page-thumbnail:focus {
+  border-left: 10px dotted gray;
+
+  .flightlog-page {
+    cursor: pointer;
+  }
+
+  .flightlog-page-number {
+    text-align: center;
+    color: #00f;
+  }
+}
+
+.btn.read-now-btn,
+.btn.read-now-btn:hover,
+.btn.read-now-btn:focus {
+  background: rgba(0, 0, 0, 0);
+  border: none;
+  color: $primaryColor;
+  border-radius: 0px;
+  text-decoration: underline;
+}
+
+.img-button.flightlog-page-thumbnail-current .flightlog-page-number,
+.btn.read-now-btn:hover,
+.btn.read-now-btn:focus {
+  background: rgba(0, 205, 0, 0.5);
+  border-left: 5px solid rgba(0, 139, 0, 0.7);
+  border-right: 5px solid rgba(0, 139, 0, 0.7);
+}
+
+.btn.read-now-btn:hover,
+.btn.read-now-btn:focus {
+  box-shadow: none;
+}
+
+.modal-header,
+.modal-body,
+.modal-footer {
+  text-align: center;
+  color: $primaryColor;
+}
+
+.media-preview-main {
+  background: url("../images/WhitePaperBackground.png"), white;
+  background-size: 90%;
+  background-position: center;
+  box-shadow: $shadowCenter;
+  border-left: 20px dotted gray;
+  min-height: 8.26in;
+  color: $primaryColor;
+
+  .accordion-item {
+    background: rgba(0, 0, 0, 0);
+  }
+
+  .accordion-button {
+    background-color: $primaryColor;
+    color: white;
+    display: block;
+  }
+
+  .accordion-button::after {
+    display: none;
+  }
+
+  .accordion-header {
+    background: rgba(0, 0, 0, 0);
+  }
+
+  .media-preview-main-img,
+  .media-preview-main-img:hover,
+  .media-preview-main-img:focus {
+    border: 5px solid rgb(221, 221, 221);
+    box-shadow: $shadowImg;
+  }
+}
+
+.table-background,
+.table-background-zene {
+  border-top: 10px solid rgb(0, 123, 255);
+  border-bottom: 10px solid rgb(0, 123, 255);
+  background: rgb(2, 164, 254);
+  box-shadow: $shadowCenter;
+}
+
+.table-background-zeanne {
+  border-top: 10px solid #9542ff;
+  border-bottom: 10px solid #9542ff;
+  background: #a25aff;
+  box-shadow: $shadowCenter;
+}
+
+.table-background-classroom-table {
+  border-top: 10px solid #feb956;
+  border-bottom: 10px solid #feb956;
+  background: #feb956;
+  box-shadow: $shadowCenter;
+}
+
+.offcanvas-bottom {
+  --bs-offcanvas-height: 50vh;
+}
+
+.offcanvas-backdrop {
+  background-color: rgba(0, 0, 0, 0);
+}
+
+.accordion-item {
+  background: rgba(0, 0, 0, 0);
+}
+
+.accordion-button,
+.accordion-button:not(.collapsed) {
+  background-color: $primaryColor;
+  background: url("../images/BlueCrayonBackground.png");
+  color: white;
+  display: block;
+}
+
+.accordion-button::after {
+  display: none;
+}
+
+.accordion-header {
+  background: rgba(0, 0, 0, 0);
+}
+
+.nav-tabs .nav-link,
+.nav-tabs .nav-link.disabled {
+  background: white;
+  border: 3px solid gray;
+}
+
+.nav-tabs .nav-link.disabled {
+  color: white;
+}
+
+.tablet-display-blue {
+  border: 5px solid #0A72CB;
+  border-radius: 30px;
+  background-color: #82BCE2;
+  box-shadow: $shadow;
+  .tablet-display-body {
+    border: 25px solid #82BCE2;
+    border-radius: 35px;
+    background-color: #82BCE2;
+    .tablet-display-screen {
+      border: 5px solid #0A72CB;
+      border-radius: 30px;
+      background-color: black;
+
+      iframe {
+        margin-top: 30px;
+        margin-bottom: 30px;
+      }
+      
+      iframe:hover,
+      iframe:focus {
+        box-shadow: none;
+      }
+    }
+  }
+}
+
+.tablet-display-pink {
+    border: 5px solid rgb(203, 92, 255);
+    border-radius: 30px;
+    background-color: rgb(215, 116, 255);
+    box-shadow: $shadow;
+    .tablet-display-body {
+      border: 25px solid rgb(215, 116, 255);
+      border-radius: 35px;
+      background-color: rgb(215, 116, 255);
+      .tablet-display-screen {
+        border: 5px solid rgb(203, 92, 255);
+        border-radius: 30px;
+        background: black;
+        background-size: cover;
+        background-position: center;
+
+        iframe {
+          margin-top: 30px;
+          margin-bottom: 30px;
+        }
+        
+        iframe:hover,
+        iframe:focus {
+          box-shadow: none;
+        }
+      }
+    }
+  }
+
+img.album-photo {
+  border: 3px solid rgb(200, 200, 200);
+}

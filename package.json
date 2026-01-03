@@ -1,0 +1,114 @@
+{
+  "name": "auvb-gfea-ual-e75l",
+  "author": "Au-venturous Buddy <auventurous.buddy@gmail.com>",
+  "main": "main.js",
+  "build": {
+    "icon": "src/images/AUVB Logo.png",
+    "productName": "Au-venturous Buddy Gotta Fly 'Em All: United Express E175",
+    "files": [
+      "public/**/*",
+      "main.js"
+    ],
+    "win": {
+      "target": [
+        {
+          "target": "portable",
+          "arch": [
+            "x64",
+            "arm64"
+          ]
+        }
+      ]
+    },
+    "linux": {
+      "target": [
+        {
+          "target": "AppImage",
+          "arch": [
+            "x64"
+          ]
+        }
+      ]
+    },
+    "mac": {
+      "target": [
+        {
+          "target": "dmg",
+          "arch": [
+            "universal"
+          ]
+        }
+      ],
+      "mergeASARs": false
+    },
+    "dmg": {
+      "background": "src/images/Zene N Zeanne Background.png"
+    }
+  },
+  "private": true,
+  "description": "United Express E175",
+  "version": "1",
+  "license": "0BSD",
+  "scripts": {
+    "build": "gatsby build",
+    "develop": "gatsby develop",
+    "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
+    "start": "npm run develop",
+    "serve": "gatsby serve",
+    "clean": "gatsby clean",
+    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1",
+    "prebuild": "npm run clean",
+    "electron": "wait-on http://localhost:8000 && electron .",
+    "electron-dev": "concurrently \"npm run develop\" \"npm run electron\"",
+    "preelectron-pack": "npm run build",
+    "electron-pack": "electron-builder"
+  },
+  "dependencies": {
+    "@capacitor/android": "^4.5.0",
+    "@capacitor/cli": "^4.5.0",
+    "@capacitor/core": "^4.5.0",
+    "@emotion/react": "^11.11.1",
+    "@emotion/styled": "^11.11.0",
+    "@mui/material": "^5.10.13",
+    "@popperjs/core": "^2.9.1",
+    "bootstrap": "^5.2.2",
+    "electron-serve": "^1.1.0",
+    "gatsby": "^5.0.0",
+    "gatsby-plugin-image": "^3.0.0",
+    "gatsby-plugin-manifest": "^5.0.0",
+    "gatsby-plugin-offline": "^6.0.0",
+    "gatsby-plugin-react-helmet": "^6.0.0",
+    "gatsby-plugin-sass": "^6.0.0",
+    "gatsby-plugin-sharp": "^5.0.0",
+    "gatsby-source-filesystem": "^5.0.0",
+    "gatsby-transformer-remark": "^6.0.0",
+    "gatsby-transformer-sharp": "^5.0.0",
+    "jquery": "^3.6.0",
+    "lmdb": "^2.4.5",
+    "qrcode.react": "^3.0.2",
+    "react": "^18.2.0",
+    "react-bootstrap": "^2.5.0",
+    "react-bootstrap-range-slider": "^3.0.8",
+    "react-dom": "^18.2.0",
+    "react-helmet": "^6.1.0",
+    "react-icons": "^4.11.0",
+    "react-slick": "^0.29.0",
+    "sass": "^1.32.8",
+    "slick-carousel": "^1.8.1",
+    "text-vide": "^1.5.0"
+  },
+  "devDependencies": {
+    "concurrently": "^7.5.0",
+    "electron": "^21.2.3",
+    "electron-builder": "^23.6.0",
+    "prettier": "2.2.1",
+    "wait-on": "^6.0.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gatsbyjs/gatsby-starter-hello-world"
+  },
+  "bugs": {
+    "url": "https://github.com/gatsbyjs/gatsby/issues"
+  }
+}
