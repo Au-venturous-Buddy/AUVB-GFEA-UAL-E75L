@@ -1,3 +1,6 @@
+@use "variables" as v;
+@use "~bootstrap/scss/bootstrap" as bootstrap;
+
 .carousel-control-prev,
 .carousel-control-next,
 .page-navigator-button {
@@ -28,7 +31,7 @@
 }
 
 .carousel-inner:hover {
-  box-shadow: $shadowCenter;
+  box-shadow: v.$shadowCenter;
 }
 
 .carousel-control-prev:hover, 
@@ -42,10 +45,10 @@
 .carousel-fade {
   .active.carousel-item-left,
   .active.carousel-item-right {
-    @include transition(opacity 1.5s $carousel-transition-duration);
+    @include bootstrap.transition(opacity 1.5s bootstrap.$carousel-transition-duration);
   }
 }
 
 .catalog > div > .slick-list > div > .slick-active > div > div {
-  box-shadow: $shadowCenter;
+  box-shadow: v.$shadowCenter;
 }
