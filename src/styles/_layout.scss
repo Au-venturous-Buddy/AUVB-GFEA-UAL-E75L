@@ -1,4 +1,5 @@
-@import "./typography.css";
+@use "./typography.css";
+@use "variables" as v;
 
 @mixin pillColor($background_color) {
   background: $background_color;
@@ -31,7 +32,7 @@ div.full-height {
     flex-direction: column;
     align-content: center;
     align-items: center;
-    box-shadow: $shadowCenter;
+    box-shadow: v.$shadowCenter;
     footer {
       display: flex;
       position: relative;
@@ -58,7 +59,7 @@ div.full-height {
 
 .shadow,
 .hover-shadow:hover {
-  box-shadow: $shadow;
+  box-shadow: v.$shadow;
 }
 
 .hover-shadow-card:hover {
@@ -79,7 +80,7 @@ article a:hover {
   color: #fff;
   text-decoration: none;
   background: linear-gradient(to right bottom, rgba(255, 255, 255, 0.3), rgba(135, 135, 135, 0.3)), #A35BFF;
-  box-shadow: $shadow;
+  box-shadow: v.$shadow;
   padding: 2px 10px;
   border-radius: 10px;
   font-weight: bold;
@@ -110,7 +111,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .accordion-button,
 .accordion-button:not(.collapsed) {
-  background: $primaryColor;
+  background: v.$primaryColor;
   border: none;
   color: #fff;
   display: block;
@@ -140,32 +141,32 @@ h1, h2, h3, h4, h5, h6 {
 .btn,
 .btn:hover,
 .btn:focus {
-  @include pillColor($primaryColor);
+  @include pillColor(v.$primaryColor);
   color: white;
   --bs-btn-active-color: white;
 }
 
 .btn:hover {
-  box-shadow: $shadow;
-  background: linear-gradient(to right bottom, rgba(255, 255, 255, 0.3), rgba(135, 135, 135, 0.3)), $primaryColor;
+  box-shadow: v.$shadow;
+  background: linear-gradient(to right bottom, rgba(255, 255, 255, 0.3), rgba(135, 135, 135, 0.3)), v.$primaryColor;
 }
 
 .btn:disabled {
-  @include pillColor((linear-gradient(to right bottom, rgba(255, 255, 255, 0.3), rgba(135, 135, 135, 0.3)), $secondaryColor));
+  @include pillColor((linear-gradient(to right bottom, rgba(255, 255, 255, 0.3), rgba(135, 135, 135, 0.3)), v.$secondaryColor));
   color: white;
 }
 
 .btn.secondary-color,
 .btn.secondary-color:hover,
 .btn.secondary-color:focus {
-  @include pillColor($secondaryColor);
+  @include pillColor(v.$secondaryColor);
   color: white;
   --bs-btn-active-color: white;
 }
 
 .btn.secondary-color:hover {
-  @include pillColor((linear-gradient(to right bottom, rgba(255, 255, 255, 0.3), rgba(135, 135, 135, 0.3)), $secondaryColor));
-  box-shadow: $shadow;
+  @include pillColor((linear-gradient(to right bottom, rgba(255, 255, 255, 0.3), rgba(135, 135, 135, 0.3)), v.$secondaryColor));
+  box-shadow: v.$shadow;
 }
 
 .profile-button {
@@ -174,13 +175,13 @@ h1, h2, h3, h4, h5, h6 {
   padding: 0;
 
   .profile-caption {
-    color: $primaryColor;
+    color: v.$primaryColor;
   }
 }
 
 .profile-button:hover,
 .profile-button:focus {
-  box-shadow: $shadowCenter;
+  box-shadow: v.$shadowCenter;
 
   .profile-caption {
     color: white;
@@ -194,7 +195,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .category-button:hover {
-  box-shadow: $shadowCenter;
+  box-shadow: v.$shadowCenter;
   .category-caption {
     color: white;
   }
@@ -207,7 +208,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .img-button.media-preview .media-preview-title {
-  color: $primaryColor;
+  color: v.$primaryColor;
 
   .media-preview-badge {
     color: #FFFFFF;
@@ -216,11 +217,11 @@ h1, h2, h3, h4, h5, h6 {
 
 .img-button:hover {
   background: rgba(255, 255, 255, 0);
-  box-shadow: $shadowImg;
+  box-shadow: v.$shadowImg;
 }
 
 .img-button.media-preview:hover .media-preview-title {
-  color: $primaryColor;
+  color: v.$primaryColor;
 
   .media-preview-badge {
     color: #FFFFFF;
@@ -237,18 +238,18 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .MuiButtonBase-root.MuiIconButton-root {
-  background: $primaryColor;
+  background: v.$primaryColor;
   color: #FFFFFF;
 }
 
 .MuiButtonBase-root.MuiIconButton-root:hover {
-  background: $buttonGradient, $primaryColor;
+  background: v.$buttonGradient, v.$primaryColor;
   color: #FFFFFF;
-  box-shadow: $shadow;
+  box-shadow: v.$shadow;
 }
 
 .modal-content {
-  box-shadow: $shadowCenter;
+  box-shadow: v.$shadowCenter;
 }
 
 ul, ol {
@@ -290,12 +291,12 @@ ul.bullet-points li {
 }
 
 .caption-background {
-  background-color: $secondaryColorTransparent;
+  background-color: v.$secondaryColorTransparent;
   color: white;
 }
 
 .preview-section {
-  background-color: $primaryColor;
+  background-color: v.$primaryColor;
   color: white; 
   padding-top: 5%;
   padding-bottom: 5%;
@@ -304,7 +305,7 @@ ul.bullet-points li {
 }
 
 .preview-section-button, .preview-section-button:hover {
-  background-color: $secondaryColor;
+  background-color: v.$secondaryColor;
 }
 
 .center-image {
@@ -314,7 +315,7 @@ ul.bullet-points li {
 
 .flightlog-page {
   border: 5px solid rgb(230, 230, 230);
-  box-shadow: $shadowImg;
+  box-shadow: v.$shadowImg;
 }
 
 .flightlog-main {
@@ -335,7 +336,7 @@ ul.bullet-points li {
 .flightlog-main,
 .img-button.flightlog-page-thumbnail:hover,
 .img-button.flightlog-page-thumbnail:focus {
-  box-shadow: $shadowCenter;
+  box-shadow: v.$shadowCenter;
 }
 
 .img-button.flightlog-page-thumbnail,
@@ -358,7 +359,7 @@ ul.bullet-points li {
 .btn.read-now-btn:focus {
   background: rgba(0, 0, 0, 0);
   border: none;
-  color: $primaryColor;
+  color: v.$primaryColor;
   border-radius: 0px;
   text-decoration: underline;
 }
@@ -380,24 +381,24 @@ ul.bullet-points li {
 .modal-body,
 .modal-footer {
   text-align: center;
-  color: $primaryColor;
+  color: v.$primaryColor;
 }
 
 .media-preview-main {
   background: url("../images/WhitePaperBackground.png"), white;
   background-size: 90%;
   background-position: center;
-  box-shadow: $shadowCenter;
+  box-shadow: v.$shadowCenter;
   border-left: 20px dotted gray;
   min-height: 8.26in;
-  color: $primaryColor;
+  color: v.$primaryColor;
 
   .accordion-item {
     background: rgba(0, 0, 0, 0);
   }
 
   .accordion-button {
-    background-color: $primaryColor;
+    background-color: v.$primaryColor;
     color: white;
     display: block;
   }
@@ -414,7 +415,7 @@ ul.bullet-points li {
   .media-preview-main-img:hover,
   .media-preview-main-img:focus {
     border: 5px solid rgb(221, 221, 221);
-    box-shadow: $shadowImg;
+    box-shadow: v.$shadowImg;
   }
 }
 
@@ -423,21 +424,21 @@ ul.bullet-points li {
   border-top: 10px solid rgb(0, 123, 255);
   border-bottom: 10px solid rgb(0, 123, 255);
   background: rgb(2, 164, 254);
-  box-shadow: $shadowCenter;
+  box-shadow: v.$shadowCenter;
 }
 
 .table-background-zeanne {
   border-top: 10px solid #9542ff;
   border-bottom: 10px solid #9542ff;
   background: #a25aff;
-  box-shadow: $shadowCenter;
+  box-shadow: v.$shadowCenter;
 }
 
 .table-background-classroom-table {
   border-top: 10px solid #feb956;
   border-bottom: 10px solid #feb956;
   background: #feb956;
-  box-shadow: $shadowCenter;
+  box-shadow: v.$shadowCenter;
 }
 
 .offcanvas-bottom {
@@ -454,7 +455,7 @@ ul.bullet-points li {
 
 .accordion-button,
 .accordion-button:not(.collapsed) {
-  background-color: $primaryColor;
+  background-color: v.$primaryColor;
   background: url("../images/BlueCrayonBackground.png");
   color: white;
   display: block;
@@ -482,7 +483,7 @@ ul.bullet-points li {
   border: 5px solid #0A72CB;
   border-radius: 30px;
   background-color: #82BCE2;
-  box-shadow: $shadow;
+  box-shadow: v.$shadow;
   .tablet-display-body {
     border: 25px solid #82BCE2;
     border-radius: 35px;
@@ -509,7 +510,7 @@ ul.bullet-points li {
     border: 5px solid rgb(203, 92, 255);
     border-radius: 30px;
     background-color: rgb(215, 116, 255);
-    box-shadow: $shadow;
+    box-shadow: v.$shadow;
     .tablet-display-body {
       border: 25px solid rgb(215, 116, 255);
       border-radius: 35px;
